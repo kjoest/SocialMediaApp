@@ -1,0 +1,16 @@
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\SocialMedia.Contracts.dll.config
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\SocialMedia.Contracts.dll
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\SocialMedia.Contracts.pdb
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\EntityFramework.dll
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\EntityFramework.SqlServer.dll
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\EntityFramework.xml
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\EntityFramework.SqlServer.xml
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\obj\Debug\SocialMedia.Contracts.csproj.AssemblyReference.cache
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\obj\Debug\SocialMedia.Contracts.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\obj\Debug\SocialMedia.Contracts.csproj.CopyComplete
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\obj\Debug\SocialMedia.Contracts.dll
+C:\ElevenFiftyProjects\CodingProjects\SideProjects\SocialMediaWebMVC2\SocialMedia\SocialMedia.Contracts\obj\Debug\SocialMedia.Contracts.pdb
