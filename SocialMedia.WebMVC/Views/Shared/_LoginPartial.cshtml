@@ -4,7 +4,6 @@
         using (Html.BeginForm("logoff", "account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
         {
         @Html.AntiForgeryToken()
-        Response.Redirect("/Post/Index");
 
         <ul class="nav navbar-nav navbar-right">
             <li>
