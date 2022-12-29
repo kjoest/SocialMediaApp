@@ -18,73 +18,138 @@
         @TempData["SaveResult"]
     </div>
 }
-    <section class="feeds-page">
-        <nav class="feeds-nav">
-            <div class="icons">
-                <a href="#"><i class="fas fa-home">Home</i></a>
-                <a href="#"><i class="fas fa-hastag">Trending</i></a>
-                <a href="#"><i class="far fa-bell">Notifications</i></a>
-                <a href="#"><i class="far fa-envelope">Messages</i></a>
+<section class="feeds-page">
+    <nav class="feeds-nav">
+        <div class="icons">
+            <a href="#"><i class="fas fa-home">Home</i></a>
+            <a href="#"><i class="fas fa-hastag">Trending</i></a>
+            <a href="#"><i class="far fa-bell">Notifications</i></a>
+            <a href="#"><i class="far fa-envelope">Messages</i></a>
+        </div>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search Social Media" class="search-bar-input border" />
+        </div>
+        <div class="user">
+            <div class="user-img-wrapper">
+                <img src="#" />
             </div>
-            <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search Social Media" class="search-bar-input border" />
+            <a href="#" class="user-link">UserOne</a>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </nav>
+
+    <div class="feeds-content">
+        <div class="feeds-header">
+            <div class="header-top border">
+                <h4>Home</h4>
+                <i class="far fa-star"></i>
             </div>
-            <div class="user">
-                <div class="user-img-wrapper">
+            <div class="header-post border">
+                <div class="header-img-wrapper">
                     <img src="#" />
                 </div>
-                <a href="#" class="user-link">UserOne</a>
-                <i class="fas fa-chevron-down"></i>
+                <input type="text" placeholder="What's Happening?" class="border" />
+                <i class="far fa-image"></i>
+                <i class="fas fa-camera"></i>
+                <i class="far fa-chart-bar"></i>
             </div>
-        </nav>
+        </div>
 
-        <div class="feeds-content">
-            <div class="feeds-header">
-                <div class="header-top border">
-                    <h4>Home</h4>
-                    <i class="far fa-star"></i>
+        <div class="posts">
+            <div class="post border">
+                <div class="user-avatar">
+                    <img src="#" />
                 </div>
-                <div class="header-post border">
-                    <div class="header-img-wrapper">
+                <div class="post-content">
+                    <div class="post-user-info">
+                        <h4>User 2</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>user2 . 15m </span>
+                    </div>
+                    <p class="post-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eos,
+                        ut quos eaque cum optio similique aliquid, reiciendis asperiores delectus officia
+                        voluptate iure distinctio nostrum repellat obcaecati, illum enim labore.
+                    </p>
+                    <div class="post-img">
                         <img src="#" />
                     </div>
-                    <input type="text" placeholder="What's Happening?" class="border" />
-                    <i class="far fa-image"></i>
-                    <i class="fas fa-camera"></i>
-                    <i class="far fa-chart-bar"></i>
-                </div>
-            </div>
-
-            <div class="posts">
-                <div class="post border">
-                    <div class="user-avatar">
-                        <img src="#" />
-                    </div>
-                    <div class="post-content">
-                        <div class="post-user-info">
-                            <h4>User 2</h4>
-                            <i class="fas fa-check-circle"></i>
-                            <span>user2 . 15m </span>
-                        </div>
-                        <p class="post-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eos,
-                            ut quos eaque cum optio similique aliquid, reiciendis asperiores delectus officia
-                            voluptate iure distinctio nostrum repellat obcaecati, illum enim labore.
-                        </p>
-                        <div class="post-img">
-                            <img src="#" />
-                        </div>
-                        <div class="post-icon">
-                            <i class="far fa-comment"></i>
-                            <i class="fas fa-retweet"></i>
-                            <i class="far fa-heart"></i>
-                            <i class="fas fa-share"></i>
-                        </div>
+                    <div class="post-icon">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-share"></i>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Sidebar -->
+
+
+    <div class="side-bar-wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header border">
+                <h2>Account Info</h2>
+                <i class="fas fa-times">X</i>
+            </div>
+            <div class="sidebar-user">
+                <div class="sidebar-user-img">
+                    <img src="images/UserImage.webp">
+                </div>
+            </div>
+            <div class="sidebar-user-info">
+                <h4>User One</h4>
+                <p>userone</p>
+            </div>
+            <div class="following">
+                <p class="following-paragraph">
+                    <span>811</span> Following
+                </p>
+                <p class="following-paragraph">
+                    <span>8.8k</span> Followers
+                </p>
+            </div>
+            <div class="sidebar-list-1 border">
+                <ul>
+                    <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+                    <li><a href="#"><i class="fa fa-cog"></i>Settings and Privacy</a></li>
+                    <li><a href="#"><i class="fa fa-question-circle"></i>Help</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-list-2">
+                @using (Html.BeginForm("logoff", "account", FormMethod.Post, new { id = "logoutForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <ul>
+                        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log Off</a></li>
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Sidbar -->
+    <!-- Javascript -->
+
+    <script>
+        const user = document.querySelector(".user");
+        const sidebar = document.querySelector(".sidebar");
+        const sidebarWrapper = document.querySelector(".sidebar-wrapper");
+        const xBtn = document.querySelector(".sidebar-header i");
+
+        user.addEventListener("click", () => {
+            sidebar.classList.add("sidebar-display");
+            sidebarWrapper.classList.add("sidebar-wrapper-display");
+        });
+
+        xBtn.addEventListener("click", () => {
+            sidebar.classList.remove("sidebar-display");
+            sidebarWrapper.classList.remove("sidebar-wrapper-display");
+        });
+    </script>
 
     <h2>Index</h2>
 
