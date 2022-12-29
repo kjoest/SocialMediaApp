@@ -19,12 +19,13 @@ namespace SocialMedia.Services.PostService
             _userId = userId;
         }
 
-        public bool CreatePost (PostCreate model)
+        public bool CreatePost (PostCreate model, string path)
         {
             var entity = new Post()
             {
                 OwnerId = _userId,
                 PostText = model.PostText,
+                ImagePath = path,
                 CreatedUtc = DateTimeOffset.Now,
             };
 

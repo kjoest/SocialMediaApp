@@ -3,6 +3,7 @@ using SocialMedia.Models.PostModels;
 using SocialMedia.Services.PostService;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -32,22 +33,51 @@ namespace SocialMedia.WebMVC.Controllers.PostController
         }
 
         [HttpPost]
+        [AcceptVerbs(HttpVerbs.Post)]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(PostCreate model)
+        public ActionResult Create(PostCreate model, HttpPostedFileBase file)
         {
             if (!ModelState.IsValid)
                 return View(model);
 
+            model.UserId = User.Identity.GetUserId();
+
+            string rootedPath;
+            string path = " ";
+            string fileName;
+
+            if (file != null)
+            {
+                fileName = Path.GetFileName(file.FileName);
+                path = "/Content/img/" + fileName;
+
+                rootedPath = Path.Combine(Server.MapPath("~/Content/img"), fileName);
+                file.SaveAs(rootedPath);
+            }
+
             var service = CreatePostService();
 
-            if (service.CreatePost(model))
+            if (service.CreatePost(model, path))
             {
-                TempData["SaveResult"] = "Your post was created successfully.";
+                TempData["SaveResult"] = "Your Post was created.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your post could not be created... Try again later.");
+            ModelState.AddModelError("", "The post could not be created... Try again later.");
             return View(model);
+            //if (!ModelState.IsValid)
+            //    return View(model);
+
+            //var service = CreatePostService();
+
+            //if (service.CreatePost(model))
+            //{
+            //    TempData["SaveResult"] = "Your post was created successfully.";
+            //    return RedirectToAction("Index");
+            //}
+
+            //ModelState.AddModelError("", "Your post could not be created... Try again later.");
+            //return View(model);
         }
     }
 }
