@@ -36,17 +36,14 @@
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
                 @*@Html.LabelFor(m => m.Email, new { @class = "control-label" })*@
-                <div>
-                    @Html.TextBoxFor(m => m.Email, new { @class = "user-info", @placeholder = "Email" })
-                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                </div>
+                @Html.TextBoxFor(m => m.Email, new { @class = "user-info", @placeholder = "Email" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
             </div>
             <div class="form-group">
                 @Html.PasswordFor(m => m.Password, new { @class = "password", @placeholder = "Password" })
                 @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                <label>
-                    @Html.ActionLink("Forgot Password?", "ForgotPassword")
-                </label>
+                @Html.ActionLink("Forgot Password?", "ForgotPassword", "Account", routeValues: null, htmlAttributes: new { @class = "forgot-password" })
+
             </div>
             <div>
                 <div>
@@ -57,12 +54,11 @@
         <div class="middle-content">
             <h1>Explore what's happening</h1>
             <h4>Join Social Media Today</h4>
-            <button type="button" class="sign-up main-btn">
-                @Html.ActionLink("Sign Up", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
-            </button>
-            <button type="button" class="log-in main-btn">
-                @Html.ActionLink("Log In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
-            </button>
+            @*<button type="button" class="sign-up main-btn">
+                    @Html.ActionLink("Sign Up", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+                </button>*@
+            @Html.ActionLink("Sign Up", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "sign-up main-btn" })
+            @Html.ActionLink("Log In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "log-in main-btn" })
         </div>
         @Html.Partial("_LoginPartial")
     </div>
