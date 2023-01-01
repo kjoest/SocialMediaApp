@@ -261,6 +261,10 @@ body {
         width: 30rem;
         height: 3.5rem;
         margin-bottom: 1rem;
+        border: 0.1rem solid #ddd;
+        border-radius: 0.5rem;
+        padding-left: 1rem;
+        transition: background-color 0.3s;
     }
 
     .login-form input:focus {
@@ -295,16 +299,165 @@ body {
         color: #444;
     }
 
-        .login-form a:hover {
-            text-decoration: underline;
-            color: #444;
-        }
+    .login-form button:hover {
+        background-color: #868686;
+        color: #444;
+    }
+
+    .login-form a:hover {
+        color: #444;
+        text-decoration: underline;
+    }
 
 .login-footer p {
     font-size: 1.6rem;
     font-weight: 300;
     margin: 0.5rem 0;
 }
+
+/* End of Login Page */
+
+/* Register Page */
+
+.register-page {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(5rem, 1fr) 2fr minmax(5rem, 1fr);
+    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-row-gap: 1.5rem;
+}
+
+.register-page-nav {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background-color: #fff;
+    padding: 2.5rem 0;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+}
+
+    .register-page-nav ul {
+        width: 100rem;
+        margin: auto;
+        display: flex;
+        align-items: flex-end;
+        list-style: none;
+    }
+
+    .register-page-nav li {
+        margin: 0 1rem;
+        position: relative;
+    }
+
+        .register-page-nav li::after {
+            content: "";
+            width: 100%;
+            height: 0.4rem;
+            background-color: #868686;
+            position: absolute;
+            bottom: -2.5rem;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+    .register-page-nav a {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: #555;
+        transition: color 0.3s;
+    }
+
+    .register-page-nav li:hover a {
+        color: #555;
+        text-decoration: underline;
+    }
+
+    .register-page-nav i {
+        color: #555;
+        font-size: 2rem;
+    }
+
+.register {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #fff;
+    width: 100rem;
+    height: 60rem;
+    display: grid;
+    grid-template-columns: 10rem 8fr;
+    grid-template-rows: 2fr 1fr;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.register-content {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    padding: 5rem 0 1rem 0;
+}
+
+    .register-content h2 {
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+    }
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+    .register-form input {
+        width: 30rem;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+        border: 0.1rem solid #ddd;
+        border-radius: 0.5rem;
+        padding-left: 1rem;
+        transition: background-color 0.3s;
+    }
+
+        .register-form input:focus {
+            background-color: #eee;
+        }
+
+    .register-form div {
+        margin-top: 2rem;
+    }
+
+    .register-form button {
+        width: 10rem;
+        padding: 1rem 1.5rem;
+        background-color: #444;
+        color: #fff;
+        border-radius: 4rem;
+        border: 0.1rem solid #444;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+
+        .register-form button:hover {
+            background-color: #868686;
+            color: #444;
+        }
+
+    .register-form a:hover {
+        text-decoration: underline;
+        color: #444;
+    }
+
+.register-footer p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0.5rem 0;
+}
+
+.login-link {
+    color: #444;
+}
+
+/* End of Register Page */
 
 /* News Feed Page */
 
