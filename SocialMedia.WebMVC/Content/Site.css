@@ -54,7 +54,7 @@ body {
             background-color: #eee;
         }
 
-    .main-content-form .forgot-password {
+    .main-content-form .forgot-password-link {
         position: absolute;
         top: 5.5rem;
         left: 0;
@@ -316,6 +316,148 @@ body {
 }
 
 /* End of Login Page */
+
+/* Forgot Password Page */
+
+.forgot-password-page {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(5rem, 1fr) 2fr minmax(5rem, 1fr);
+    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-row-gap: 1.5rem;
+}
+
+.forgot-password-nav {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background-color: #fff;
+    padding: 2.5rem 0;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+}
+
+    .forgot-password-nav ul {
+        width: 100rem;
+        margin: auto;
+        display: flex;
+        align-items: flex-end;
+        list-style: none;
+    }
+
+.forgot-password-page li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+    .forgot-password-page li::after {
+        content: "";
+        width: 100%;
+        height: 0.4rem;
+        background-color: #868686;
+        position: absolute;
+        bottom: -2.5rem;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+.forgot-password-nav a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.forgot-password-nav li:hover a {
+    color: #555;
+    text-decoration: underline;
+}
+
+.forgot-password-nav i {
+    color: #555;
+    font-size: 2rem;
+}
+
+.forgot-password {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #fff;
+    width: 100rem;
+    display: grid;
+    grid-template-columns: 10rem 8fr;
+    grid-template-rows: 2fr 1fr;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.forgot-password-content {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    padding: 5rem 0 1rem 0;
+}
+
+    .forgot-password-content h2 {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .forgot-password-content h4 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+.forgot-password-form {
+    display: flex;
+    flex-direction: column;
+}
+
+    .forgot-password-form input {
+        width: 50rem;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+        border: 0.1rem solid #ddd;
+        border-radius: 0.5rem;
+        padding-left: 1rem;
+        transition: background-color 0.3s;
+    }
+
+        .forgot-password-form input:focus {
+            background-color: #eee;
+        }
+
+    .forgot-password-form div {
+        margin-top: 2rem;
+    }
+
+    .forgot-password-form button {
+        width: 15rem;
+        padding: 1rem 1.5rem;
+        background-color: #444;
+        color: #fff;
+        border-radius: 4rem;
+        border: 0.1rem solid #444;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+
+        .forgot-password-form button:hover {
+            background-color: #868686;
+            color: #444;
+        }
+
+    .forgot-password-form a:hover {
+        text-decoration: underline;
+        color: #444;
+    }
+
+    .forgot-password-footer p {
+        font-size: 1.6rem;
+        font-weight: 300;
+        margin: 0.5rem 0;
+    }
+
+/* End of Forgot Password Page */
 
 /* Register Page */
 

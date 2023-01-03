@@ -38,12 +38,12 @@
         @RenderBody()
         <footer class="main-page-footer">
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Help", "Help", "Home")</li>
+                <li>@Html.ActionLink("Terms of Service", "TermsOfService", "Home")</li>
+                <li>@Html.ActionLink("Settings", "Settings", "Home")</li>
+                <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Privacy Policy", "PrivacyPolicy", "Home")</li>
                 <li><p>&copy; @DateTime.Now.Year - Social Media App </p></li>
             </ul>
         </footer>

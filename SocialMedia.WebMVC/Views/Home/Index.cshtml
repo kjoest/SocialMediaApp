@@ -42,7 +42,7 @@
             <div class="form-group">
                 @Html.PasswordFor(m => m.Password, new { @class = "password", @placeholder = "Password" })
                 @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                @Html.ActionLink("Forgot Password?", "ForgotPassword", "Account", routeValues: null, htmlAttributes: new { @class = "forgot-password" })
+                @Html.ActionLink("Forgot Password?", "ForgotPassword", "Account", routeValues: null, htmlAttributes: new { @class = "forgot-password-link" })
 
             </div>
             <div>
