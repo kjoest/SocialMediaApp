@@ -451,16 +451,71 @@ body {
         color: #444;
     }
 
-    .forgot-password-footer p {
-        font-size: 1.6rem;
-        font-weight: 300;
-        margin: 0.5rem 0;
-    }
+.forgot-password-footer p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0.5rem 0;
+}
+
+/* End of Forgot Password Page */
+
+/* Forgot Password Confirmation Page */
+
+.forgot-password-confirmation-page {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(5rem, 1fr) 2fr minmax(5rem, 1fr);
+    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-row-gap: 1.5rem;
+}
+
+.forgot-password-confirmation-page li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.forgot-password-confirmation {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #fff;
+    width: 100rem;
+    height: 50rem;
+    display: grid;
+    grid-template-columns: 10rem 8fr;
+    grid-template-rows: 2fr 1fr;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.forgot-password-confirmation-content {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    padding: 5rem 0 1rem 0;
+}
+
+.forgot-password-confirmation-content h2 {
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+
+.forgot-password-confirmation h4 {
+    font-size: 2.5rem;
+}
+
+.forgot-password-confirmation-footer p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0.5rem 0;
+}
+
+.forgot-password-confirmation a:hover {
+    text-decoration: underline;
+    color: #444;
+}
 
 /* End of Forgot Password Page */
 
 /* Register Page */
-
 .register-page {
     width: 100%;
     height: 100vh;
