@@ -1,6 +1,6 @@
 ﻿using SocialMedia.Data.PostData;
 using SocialMedia.Models.PostModels;
-using SocialMedia.WebMVC.Models;
+using SocialMedia.WebMVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;

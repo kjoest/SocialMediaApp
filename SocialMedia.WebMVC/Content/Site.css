@@ -470,10 +470,10 @@ body {
     grid-row-gap: 1.5rem;
 }
 
-.forgot-password-confirmation-page li {
-    margin: 0 1rem;
-    position: relative;
-}
+    .forgot-password-confirmation-page li {
+        margin: 0 1rem;
+        position: relative;
+    }
 
 .forgot-password-confirmation {
     grid-column: 2 / 3;
@@ -493,10 +493,10 @@ body {
     padding: 5rem 0 1rem 0;
 }
 
-.forgot-password-confirmation-content h2 {
-    font-size: 5rem;
-    margin-bottom: 5rem;
-}
+    .forgot-password-confirmation-content h2 {
+        font-size: 5rem;
+        margin-bottom: 5rem;
+    }
 
 .forgot-password-confirmation h4 {
     font-size: 2.5rem;

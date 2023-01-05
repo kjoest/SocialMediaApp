@@ -57,9 +57,10 @@
             </div>
         </div>
 
-        @foreach (var item in Model)
-        {
-            <div class="posts">
+
+        <div class="posts">
+            @foreach (var item in Model)
+            {
                 <div class="post border">
                     <div class="user-avatar">
                         <img src="@Html.DisplayFor(modelItem => item.ImagePath)" />
@@ -94,8 +95,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
 
     <!-- Sidebar -->
@@ -112,8 +113,8 @@
                 </div>
             </div>
             <div class="sidebar-user-info">
-                <h4>User One</h4>
-                <p>userone</p>
+                <h4>@User.Identity.Name</h4>
+                <p></p>
             </div>
             <div class="following">
                 <p class="following-paragraph">
@@ -126,8 +127,8 @@
             <div class="sidebar-list-1 border">
                 <ul>
                     <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
-                    <li><a href="#"><i class="fa fa-cog"></i>Settings and Privacy</a></li>
-                    <li><a href="#"><i class="fa fa-question-circle"></i>Help</a></li>
+                    <li><i class="fa fa-cog"></i>@Html.ActionLink("Settings", "Settings", "Home")</li>
+                    <li><i class="fa fa-question-circle"></i>@Html.ActionLink("Help", "Help", "Home")</li>
                 </ul>
             </div>
             <div class="sidebar-list-2">

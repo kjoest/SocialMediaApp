@@ -11,7 +11,6 @@ namespace SocialMedia.Models.PostModels
         public int PostId { get; set; }
         public string PostText { get; set; }
         public string ImagePath { get; set; }
-
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
     }
