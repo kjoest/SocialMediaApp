@@ -25,8 +25,8 @@ namespace SocialMedia.Services.PostService
             {
                 OwnerId = _userId,
                 PostText = model.PostText,
-                ImagePath = path,
                 CreatedUtc = DateTimeOffset.Now,
+                ImagePath = path
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -48,6 +48,7 @@ namespace SocialMedia.Services.PostService
                     {
                         PostId = p.PostId,
                         PostText = p.PostText,
+                        ImagePath = p.ImagePath,
                         CreatedUtc = p.CreatedUtc,
                         ModifiedUtc = p.ModifiedUtc,
                     });
@@ -67,6 +68,7 @@ namespace SocialMedia.Services.PostService
                 {
                     PostId = entity.PostId,
                     PostText = entity.PostText,
+                    ImagePath = entity.ImagePath,
                     CreatedUtc = entity.CreatedUtc,
                     ModifiedUtc = entity.ModifiedUtc,
                 };

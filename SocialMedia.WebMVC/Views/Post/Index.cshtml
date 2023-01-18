@@ -84,9 +84,10 @@
                         <p class="post-text">
                             @Html.DisplayFor(modelItem => item.PostText)
                         </p>
-                        <div class="post-img">
-                            <img src="@Html.DisplayFor(modelItem => item.ImagePath)" />
-                        </div>
+                        @*<div class="post-img">
+                                <img src="@Html.DisplayFor(modelItem => item.ImagePath)" />
+                            </div>*@
+                        <img src="@Html.DisplayFor(modelItem => item.ImagePath)" class="post-img" />
                         <div class="post-icon">
                             <i class="far fa-comment">Comment</i>
                             <i class="fas fa-retweet">Repost</i>

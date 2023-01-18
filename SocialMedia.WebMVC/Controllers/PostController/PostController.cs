@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Services.Description;
 
 namespace SocialMedia.WebMVC.Controllers.PostController
 {
@@ -46,6 +47,8 @@ namespace SocialMedia.WebMVC.Controllers.PostController
             string path = " ";
             string fileName;
 
+            var service = CreatePostService();
+
             if (file != null)
             {
                 fileName = Path.GetFileName(file.FileName);
@@ -55,15 +58,14 @@ namespace SocialMedia.WebMVC.Controllers.PostController
                 file.SaveAs(rootedPath);
             }
 
-            var service = CreatePostService();
-
             if (service.CreatePost(model, path))
             {
-                TempData["SaveResult"] = "Your Post was created.";
+
+                TempData["SaveResult"] = "The post was added successfully.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "The post could not be created... Try again later.");
+            ModelState.AddModelError("", "The post could not be added... Try again later.");
             return View(model);
             //if (!ModelState.IsValid)
             //    return View(model);
