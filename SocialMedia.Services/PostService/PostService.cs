@@ -24,7 +24,7 @@ namespace SocialMedia.Services.PostService
             var entity = new Post()
             {
                 OwnerId = _userId,
-                PostText = model.PostText,
+                Content = model.PostText,
                 CreatedUtc = DateTimeOffset.Now,
                 ImagePath = path
             };
@@ -47,7 +47,7 @@ namespace SocialMedia.Services.PostService
                     .Select(p => new PostListDetail
                     {
                         PostId = p.PostId,
-                        PostText = p.PostText,
+                        PostText = p.Content,
                         ImagePath = p.ImagePath,
                         CreatedUtc = p.CreatedUtc,
                         ModifiedUtc = p.ModifiedUtc,
@@ -67,7 +67,7 @@ namespace SocialMedia.Services.PostService
                 return new PostDetail
                 {
                     PostId = entity.PostId,
-                    PostText = entity.PostText,
+                    PostText = entity.Content,
                     ImagePath = entity.ImagePath,
                     CreatedUtc = entity.CreatedUtc,
                     ModifiedUtc = entity.ModifiedUtc,
@@ -84,7 +84,7 @@ namespace SocialMedia.Services.PostService
                     .Single(p => p.PostId == model.PostId && p.OwnerId == _userId);
 
                 entity.PostId = model.PostId;
-                entity.PostText = model.PostText;
+                entity.Content = model.PostText;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
